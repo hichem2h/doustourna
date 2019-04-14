@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#" style="padding: 0px;">
+            <img src="../assets/images/LOGO.PNG" style="height: 48px">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto navbar-white">
+                <li class="nav-item " routerLinkActive="active" >
+                    <a class="nav-link" [routerLink]="['/landingPage']">Accueil<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" [routerLink]="['/home']">Doustourna<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" [routerLink]="['/questions']">Question<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item poser" routerLinkActive="active">
+                    <a class="nav-link" [routerLink]="['/questions/post']">Poser Question<span
+                            class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<router-outlet></router-outlet>
+
+<footer class="footer-bottom">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-9">
+                <h4 class="footer-title-section">Découvrir</h4>
+                <ul>
+                    <li>Doustourna</li>
+                    <li>Tous les commentaires et avis</li>
+                    <li>Tous les questions</li>
+                    <li>Toutes les videos</li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h4 class="footer-title-section">Informations utiles</h4>
+                <ul>
+                    <li>Qui sommes-nous ?</li>
+                    <li>Centre d'aide</li>
+                    <li>Règles de diffusion des annonces</li>
+                    <li>Assurances</li>
+                    <li>Plan de site</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>

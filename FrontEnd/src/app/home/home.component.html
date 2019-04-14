@@ -1,0 +1,47 @@
+<header class="all-requests-cover">
+  <div class="overlay" style="background-image: url('../../assets/images/Capture.PNG');background-size: cover">
+    <div class="intro text-center">
+      <div class="container">
+        <h1 class="intro-title text-shadow">Doustourna</h1>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- All Requests -->
+<section class="all-requests">
+  <div class="container">
+    <div class="all-requests-title text-center">
+      <h2></h2>
+    </div>
+    <div class="row">
+      <div class="all-requests-filter-panel col-xs-12 col-sm-12 col-md-3">
+
+        <div *ngFor="let item of chapters | async" class="filter-categorie">
+          <h3 class="filter-title">{{item.name}}</h3>
+          <ul *ngFor="let sec of item.sections" class="filter-list">
+            <li><a [routerLink]="['/home']"  (click)="select(sec)">{{sec.name}}</a></li>
+
+          </ul>
+        </div>
+
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-9" style="text-align: center">
+        <article *ngFor="let item of selected" class="requestItem">
+          <a class="requestItemLink" href="../../assets/video.mp4"></a>
+          <div class="requestItemValues">
+            <div class="requestItemDate">{{item.date}}</div>
+          </div>
+          <div class="requestItemID">
+            <div class="requestItemInfos">
+              <h3 class="requestItemTitle">{{item.name}}</h3>
+              <div class="requestItemDescription">{{item.content}}</div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </div>
+</section>
+<router-outlet></router-outlet>

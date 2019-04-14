@@ -1,0 +1,51 @@
+<header class="all-requests-cover">
+    <div class="overlay" style="background-image: url('../../assets/images/Capture.PNG');background-size: cover">
+      <div class="intro text-center">
+        <div class="container">
+          <h1 class="intro-title text-shadow">Toutes les questions</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<section class="all-requests mt-5">
+  <div class="container">
+    <div class="row">
+
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-10">
+      <article *ngFor="let item of questions | async" class="requestItem">
+        <a class="requestItemLink"></a>
+
+        <div class="requestItemID">
+          <div class="requestItemAvatar">
+            <img width="100%" height="100%" src="http://jobexpress.tech/imgs/photo3.jpg" alt="">
+          </div>
+          <div class="requestItemInfos">
+            <label class="requestItemName">{{item.profession}}</label>
+            <h3 class="requestItemTitle">{{item.name}}</h3>
+            <h6 class="mt-4">{{item.question}}</h6>
+            <div class="requestItemBottom">
+              <div class="requestItemLocation">
+                <div class="">
+                  <h6>response</h6> <br />
+                  {{item.answer}}
+                </div>
+              </div>
+
+            </div>
+            <div class="requestItemBottom">
+              <div class="requestItemLocation">
+                <div class="requestItemValues">
+                  <div class="requestItemDate">2019-04-12</div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
